@@ -1,5 +1,6 @@
 package main
 
+// パッケージをインポート
 import (
 	"ex03/piscine"
 )

@@ -7,4 +7,5 @@ import (
 
 func main() {
 	fmt.Println(recursivefactorial.RecursiveFactorial(5))
+	fmt.Println(recursivefactorial.RecursiveFactorial(20))
 }

@@ -21,6 +21,9 @@ func main() {
 	// fmt.Println(p)
 
 	n := 0
+	fmt.Println(n)
+	fmt.Println(&n)
+	fmt.Println("")
 	pointone.PointOne(&n)
 	fmt.Println(n)
 }

@@ -3,12 +3,11 @@ package pointone
 import "fmt"
 
 func PointOne(nb *int) {
-	var p *int
-	fmt.Println(&p)
-	fmt.Println(p)
-
-	p = &nb
-	fmt.Println(&nb)
-	fmt.Println(&p)
-	fmt.Println(p)
+	fmt.Println("get nb address -> ", &nb)
+	fmt.Println("get nb value -> ", nb)
+	fmt.Println()
+	*nb = 1
+	fmt.Println("get nb asterisk -> ", *nb)
+	fmt.Println("get nb address -> ", &nb)
+	fmt.Println("get nb value -> ", nb)
 }

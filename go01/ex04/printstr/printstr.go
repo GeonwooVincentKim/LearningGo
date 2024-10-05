@@ -20,3 +20,7 @@ func PrintStr(s string) string {
 	}
 	return s
 }
+
+func NewPrintStr(s string) string {
+	return s
+}

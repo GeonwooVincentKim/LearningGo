@@ -10,28 +10,49 @@ import (
 // 	structure.structure()
 // }
 
-// Similar to fields, methods that start with a lowercase letter are unexported (private) in Go
-// and cannot be accessed outside their package.
+// Case of Slice (List)
 func main() {
-	user0 := &newlist.Amazon{}
-	user1 := newlist.Amazon{}
-	// user0 := newlist.Amazon{UniqueKey: 35}
-	// user0.setUniqueKey()
+	numbres := newlist.IntList{1, 2, 3, 4, 5}
+	fmt.Print("Initializing -> ")
+	fmt.Println("Address", &numbres)
+	numbres.Print()
 
-	fmt.Printf("Initializing (User0): %+v\n", user0)
-	fmt.Printf("Getting first address (User0): %p\n", &user0)
-	user0.SetUniqueKey()
-	fmt.Printf("After (User0): %+v\n", user0)
-	fmt.Printf("After first address (User0): %p\n", &user0)
+	fmt.Print("\nAppend -> ")
+	fmt.Println("Address", &numbres)
+	numbres.Append(6)
+	numbres.Print()
 
-	fmt.Println()
-	fmt.Printf("Initializing (User1): %+v\n", user1)
-	fmt.Printf("Getting first address (User1): %p\n", &user1)
-	user1.SetValueUniqueKey()
-	fmt.Printf("After (User1): %+v\n", user1)
-	fmt.Printf("After first address (User1): %p\n", &user1)
+	fmt.Print("\nClear -> ")
+	numbres.Truncate()
+	numbres.Print()
+
+	fmt.Println("\nReset -> ")
+	numbres.Double()
+	numbres.Print()
 }
 
+// Case of SetUniqueKey() and Pointer & Value Receiver
+// Similar to fields, methods that start with a lowercase letter are unexported (private) in Go
+// and cannot be accessed outside their package.
+// func main() {
+// 	user0 := &newlist.Amazon{}
+// 	user1 := newlist.Amazon{}
+// 	// user0 := newlist.Amazon{UniqueKey: 35}
+// 	// user0.setUniqueKey()
+// 	fmt.Printf("Initializing (User0): %+v\n", user0)
+// 	fmt.Printf("Getting first address (User0): %p\n", &user0)
+// 	user0.SetUniqueKey()
+// 	fmt.Printf("After (User0): %+v\n", user0)
+// 	fmt.Printf("After first address (User0): %p\n", &user0)
+// 	fmt.Println()
+// 	fmt.Printf("Initializing (User1): %+v\n", user1)
+// 	fmt.Printf("Getting first address (User1): %p\n", &user1)
+// 	user1.SetValueUniqueKey()
+// 	fmt.Printf("After (User1): %+v\n", user1)
+// 	fmt.Printf("After first address (User1): %p\n", &user1)
+// }
+
+// Case of Method and Main function with Pointer
 // func main() {
 // 	v := structure.Vertex{3, 4}
 // 	fmt.Printf("Memory address in Main for v -> %p\n", &v)
